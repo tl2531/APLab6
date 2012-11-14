@@ -6,11 +6,11 @@
 CC  = gcc
 CXX = g++
 
-INCLUDES = -I../../lab3/part1
+INCLUDES = -I../../lab3/solutions/part1
 CFLAGS   = -g -Wall $(INCLUDES)
 CXXFLAGS = -g -Wall $(INCLUDES)
 
-LDFLAGS = -g -L../../lab3/part1
+LDFLAGS = -g -L../../lab3/solutions/part1
 LDLIBS = -lmylist
 
 .PHONY: default
