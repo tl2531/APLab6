@@ -10,5 +10,6 @@ The server computer will say Handling client <IP address>,
 and on the client, type in whatever you want to search, like:
 Emily or <Enter>, then Ctrl+D to quit.
 Then the server computer will be ready to take the next client who tries to connect. To end, press Ctrl+C. It will print a new line and exit.
+I ran valgrind on this part of my code and it said all heap blocks were freed and no leaks are possible with 0 errors.
 
 Part 2:
