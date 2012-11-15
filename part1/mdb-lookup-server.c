@@ -43,6 +43,7 @@ void HandleTCPClient(int clntSocket, char *filename)
   struct Node *node = NULL;
 
   while(fread(&r, sizeof(r), 1, fp) == 1)
+
     {
       // allocate memory for a new record and copy into it
       // the one that was just read from database
