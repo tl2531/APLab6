@@ -11,6 +11,7 @@
 #include <sys/socket.h> /* for socket(), bind(), and connect() */
 #include <arpa/inet.h>  /* for sockaddr_in and inet_ntoa() */
 #include <stdlib.h>     /* for atoi() and exit() */
+#include <signal.h>     
 #include <string.h>     /* for memset() */
 #include <unistd.h>     /* for close() */
 
@@ -108,6 +109,12 @@ int main(int argc, char *argv[])
   if(signal(SIGPIPE, SIG_IGN) == SIG_ERR)
     DieWithError("signal() failed");
   */
+
+  //ignore SIGPIPE so that we don't terminate when we call
+  // send() on a disconnected socket
+  if(signal(SIGPIPE, SIG_IGN) == SIG_ERR)
+    DieWithError("signal() failed");
+
     int servSock;                    /* Socket descriptor for server */
     int clntSock;                    /* Socket descriptor for client */
     struct sockaddr_in echoServAddr; /* Local address */
