@@ -17,7 +17,7 @@ default: http-client
 
 .PHONY: clean
 clean:
-	rm -f *.o *~ a.out core http-client *.html
+	rm -f *.o *~ a.out core http-client
 
 .PHONY: all
 all: clean default

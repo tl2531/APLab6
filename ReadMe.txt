@@ -13,3 +13,11 @@ Then the server computer will be ready to take the next client who tries to conn
 I ran valgrind on this part of my code and it said all heap blocks were freed and no leaks are possible with 0 errors.
 
 Part 2:
+This part of my program works as specified. Simply type make, then you can request a webpage by typing a command like:
+./http-client www.gnu.org 80 /software/make/manual/make.html
+then you should have a file (in this case called make.html) in your current directory that contains only the HTML file content of that page.
+If you made a typo and accidentally typed:
+./http-client www.gnu.org 80 /software/make/manual/mak.html
+then the page doesn't exist, so it will print out into the terminal the error
+(in this case "HTTP\1.1 404 Not Found) and then the program will terminate.
+
