@@ -20,4 +20,5 @@ If you made a typo and accidentally typed:
 ./http-client www.gnu.org 80 /software/make/manual/mak.html
 then the page doesn't exist, so it will print out into the terminal the error
 (in this case "HTTP\1.1 404 Not Found) and then the program will terminate.
+I ran valgrind on my program, and I got 0 errors and 0 lost. I have still reachable, but according to Jae these are fine.
 
